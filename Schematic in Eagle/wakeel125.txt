@@ -1,0 +1,29 @@
+Partlist exported from D:/Spring 2022 (th)/ATmega-Transistor-Tester-master/schematic/Transisitor Testor wakeel & Bhai/wakeel125.sch at 6/17/2022 12:54 AM
+
+Part    Value         Device                   Package    Description                                                                                                     MF MPN OC_FARNELL OC_NEWARK SF_ID    
+5V      PWR LED       LEDFAB1206               LED1206FAB LED                                                                                                                                                  
+1206LED D13 LED       LEDFAB1206               LED1206FAB LED                                                                                                                                                  
+C4      22pF          CAP-UNPOLARIZEDFAB       C1206FAB                                                                                                                                                        
+C5      22pF          CAP-UNPOLARIZEDFAB       C1206FAB                                                                                                                                                        
+C12     0.1uF         CAP-UNPOLARIZEDFAB       C1206FAB                                                                                                                                                        
+CN1     USB_MINIB     USB_MINIB                USB_MINIB                                                                                                                                                       
+FTDI                  6_PIN_SERIAL_TARGET_SILK 1X06       6-pin header connection for use with the "FTDI BASIC" pinout - TARGET SIDE.                                                                          
+ISP     AVRISPSMD     AVRISPSMD                2X03SMD                                                                                                                                                         
+J2                    CONN_05                  1X05       Multi connection point. Often used as Generic Header-pin footprint for 0.1 inch spaced/style header connections                                      
+LCD1    LCD-16X2SILK  LCD-16X2SILK             LCD-16X2   Standard text-only 16x2 parallel input LCD                                                                                                  LCD-00255
+MICRO   ATMEGA328P-AU ATMEGA48/88/168-AU       TQFP32-08                                                                                                                                                       
+Q2                    CRYSTALHC49U70           HC49U70    CRYSTAL                                                                                                                unknown    unknown            
+R1      499           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R2      10K           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R3      499           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R4      680           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R5      470k          RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R6      680           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R7      470k          RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R8      680           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R9      470k          RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R10                   TRIM_EU-B64W             B64W       POTENTIOMETER                                                                                                                                        
+R11     10K           RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+R12     0             RES-US1206FAB            R1206FAB   Resistor (US Symbol)                                                                                                                                 
+S1                    6MM_SWITCH6MM_SWITCH     6MM_SWITCH OMRON SWITCH                                                                                                                                         
+S2                    6MM_SWITCH6MM_SWITCH     6MM_SWITCH OMRON SWITCH                                                                                                                                         

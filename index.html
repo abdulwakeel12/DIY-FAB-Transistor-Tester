@@ -1,0 +1,901 @@
+<!-- Doctype HTML -->
+<html>
+
+<head>
+  <link href="style.css" type="text/css" rel="stylesheet">
+
+  <link href="https://www.w3schools.com/w3css/3/w3.css" type="text/css" rel="stylesheet">
+  <script type="text/javascript" src="http://latex.codecogs.com/latexit.js"></script>
+
+  <style>
+    footer {
+      background: #aaa;
+      color: white;
+      height: 30px;
+      z-index: 10000;
+      position: relative;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px;
+    }
+
+    th {
+      text-align: left;
+    }
+  </style>
+
+  <title>
+    Introduction to Embedded Systems Project Report - (Bhai Khan & Wakeel Ahmed!)
+  </title>
+
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+  <style>
+    * {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: sans-serif;
+    }
+
+    .gallery {
+      background: #EEE;
+    }
+
+    .gallery-cell {
+      width: 66%;
+      height: 200px;
+      margin-right: 10px;
+      background: #8C8;
+      counter-increment: gallery-cell;
+    }
+
+    .gallery-cell:before {
+      display: block;
+      text-align: center;
+      content: counter(gallery-cell);
+      line-height: 200px;
+      font-size: 80px;
+      color: white;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <div id="main-wrapper">
+
+    <div id="left-background"></div>
+
+    <div id="right-background"></div>
+
+    <div id="main">
+
+      <div id="header">
+        <div id="header-title">
+          <span style="color: indigo; font-family: 'Arial Black', sans-serif;">
+            Bhai Khan (033-19-0015) & Wakeel Ahmed (033-19-0026)
+          </span>
+        </div>
+      </div>
+
+<hr>
+
+
+<div id="nav-bar">
+  <div id="nav-bar-area">
+    <div class="link"><a href="#C1">Introduction</a></div>
+    <div class="separator"></div>
+    <div class="link"><a href="#C2">High Level Design</a></div>
+    <div class="separator"></div>
+    <div class="link"><a href="#C3">Design</a></div>
+    <div class="separator"></div>
+    <div class="link"><a href="#C4">Results</a></div>
+    <div class="separator"></div>
+    <div class="link"><a href="#C5">Conclusion</a></div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+<hr>
+<br><br>
+
+<div id="main-container">
+  <div id="page-title0">
+    <b>Introduction to Embedded System</b>
+  </div>
+
+  <div id="page-title-1">
+    <b>(Supervisor: Dr.Muhammad Asim Samejo)</b>
+  </div>
+
+  <br><br>
+
+  <div id="page-title2">
+    <b>DIY FAB TRANSISTOR TESTOR</b>
+  </div>
+
+  <div id="page-title3"></div>
+</div>
+
+<br><br>
+
+
+<h1 id="C1">Introduction</h1>  
+<p align="justify">
+  Every Scholar either in the undergraduate program or in the research program has trouble with some of the basic components in daily use. 
+  The most irritating component is the transistor because it is difficult to identify its types: NPN, PNP, N-Channel, P-Channel, E-MOSFET, or D-MOSFET, and its pins (EBC).
+  The parameters that irritate the most are the current gain value or IDSS, which can significantly impact calculations.
+  <br><br>
+  This device will include a user-interface system that provides the current gain or IDSS value, as well as the collector cut-off current (ICE0) 
+  and collector residual current (ICEs) simultaneously.
+</p>
+
+<h3>Design Requirements:</h3>
+<p align="justify">
+  To proceed with this objective, we will be provided with the essential components, and other parts will be printed using the 
+  <b><u>Ultimaker</u></b> 3D printing machine in the Fabrication Lab and Workshop Lab.
+  <br><br>
+  Following components are considered for design requirements:
+</p>
+
+<ul>
+  <li><b>LCD Display with 16 by 2 Character</b> <i>(for displaying results)</i></li>
+  <li><b>Jumper Wires</b> <i>(for connections of components)</i></li>
+  <li><b>USB (MINI) DC Power Supply</b></li>
+  <li><b>6 Resistors (3 × 680 ohm & 3 × 470 KΩ)</b> <i>(Measurement type resistors)</i></li>
+  <li><b>Testport</b> <i>(To measure components)</i></li>
+  <li><b>Self Created Dedicated Printed Circuit Board</b></li>
+  <li><b>Test Button</b></li>
+  <li><b>Some Parts to be Printed from Ultimaker</b></li>
+</ul>
+
+
+<br><br>
+<h1 id="C2">High Level Design</h1>
+<br>
+
+<h3>Sample Images of Final Design:</h3>
+<p align="justify">
+  The following picture of the product has been focused upon as a reference design:
+</p>
+
+<center>
+  <img src="images/TransistorTester1.jpg" width="400" height="400">
+</center>
+
+<p align="justify">
+  From this design, an idea will be taken and a similar product will be designed.
+</p>
+
+<br><br>
+
+<p align="justify">
+  The following picture of the internal circuit diagram has been used as a reference to be updated:
+</p>
+
+<center>
+  <img src="images/ardutester_breadboard.jpg" width="400" height="400">
+</center>
+
+<p align="justify">
+  From this circuit diagram, we have been instructed to convert the whole scenario from OLED-based,
+  which has proved to be a grave challenge.
+</p>
+
+<br>
+
+<p align="justify" style="font-size: 1.5em;">
+  In other words, we have been guided to create our own dedicated PCB circuit which should run all the components
+  with the given microcontroller.
+</p>
+
+<br><br>
+
+<h3>Mechanical Drawing:</h3>
+
+<p align="justify">
+  The following picture is the roughly drawn mechanical design of the product:
+  <br><br>
+  Different dimensions (in millimetres) have been assigned to the parts, keeping in mind the size of the PCB and other components.
+</p>
+
+<center>
+  <img src="images/Roughly Mechanical Sketch.jpg" width="400" height="400">
+</center>
+
+<br><br>
+
+
+<h3>Project Execution Plan:</h3>
+
+<p align="justify">
+  All the electrical and mechanical components will be tested and learnt to control one by one, and then collectively be 
+  controlled to get the genuine idea and understanding. In this manner, the provided referenced circuit will be implemented.
+</p>
+
+<br><br>
+
+
+<h3>Distribution of Tasks:</h3>
+
+<table border="2">
+  <tr>
+    <th>S.No</th>
+    <th>Tasks</th>
+    <th>Pictures</th>
+    <th>Distributed to</th>
+  </tr>
+
+  <tr>
+    <td>1</td>
+    <td>Literature Review of the project and functional requirements.</td>
+    <td><img src="images/Literature Review.jpg" width="200" height="200"></td>
+    <td>Both</td>
+  </tr>
+
+  <tr>
+    <td>2</td>
+    <td>Selection of components.</td>
+    <td><img src="images/Selection of components.jpg" width="200" height="200"></td>
+    <td>Both</td>
+  </tr>
+
+  <tr>
+    <td>3</td>
+    <td>To Design of Schematic / PCB.</td>
+    <td><img src="images/Electrical Schematic.jpg" width="200" height="200"></td>
+    <td>Wakeel Ahmed (033-19-0026)</td>
+  </tr>
+
+  <tr>
+    <td>4</td>
+    <td>To design in CAD.</td>
+    <td><img src="images/SolidWorks Logo.jpg" width="200" height="200"></td>
+    <td>Bhai Khan (033-19-0015)</td>
+  </tr>
+
+  <tr>
+    <td>5</td>
+    <td>To work on PCB Designing.</td>
+    <td><img src="images/Eagle Software Logo.jpg" width="200" height="200"></td>
+    <td>Team of FAB Lab</td>
+  </tr>
+
+  <tr>
+    <td>6</td>
+    <td>To solder components on PCB.</td>
+    <td><img src="images/Soldering.jpg" width="200" height="200"></td>
+    <td>Both</td>
+  </tr>
+
+  <tr>
+    <td>7</td>
+    <td>Printing the PCB.</td>
+    <td><img src="images/SRM Machine.jpg" width="200" height="200"></td>
+    <td>Team of FAB Lab</td>
+  </tr>
+
+  <tr>
+    <td>8</td>
+    <td>Printing all 3D parts.</td>
+    <td><img src="images/Ultimaker.jpg" width="200" height="200"></td>
+    <td>Team of FAB Lab</td>
+  </tr>
+
+  <tr>
+    <td>9</td>
+    <td>To assemble everything together.</td>
+    <td><img src="images/Assembly Logo.jpg" width="200" height="200"></td>
+    <td>Both</td>
+  </tr>
+
+  <tr>
+    <td>10</td>
+    <td>To make report.</td>
+    <td><center><img src="images/HTML Tag.jpg" width="200" height="200"></center></td>
+    <td>Both</td>
+  </tr>
+</table>
+
+
+<br><br><br><br>
+
+<h3>Execution of General Tasks and Main Tasks by Using Arduino UNO:</h3>
+
+<ul type="square">
+  <li>
+    <b>Task No.1</b><br>
+    <b>Bread Board Prototype</b><br>
+    <u>With general code.</u><br><br>
+
+    <!-- Flickity HTML init -->
+    <div class="gallery js-flickity"
+         data-flickity-options='{ "wrapAround": true }'>
+      <div><img src="images/Operating TT 1.jpg" width="400" height="300"></div>
+      <div><img src="images/Operating TT 2.jpg" width="400" height="300"></div>
+      <div><img src="images/Operating TT 3.jpg" width="400" height="300"></div>
+    </div>
+    <!-- end -->
+  </li>
+</ul>
+
+
+
+<br><br>
+
+<center>
+  <iframe width="400" height="600"
+          src="https://www.youtube.com/embed/zdPWsUJlSmU"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+  </iframe>
+</center>
+</li>
+<br><br>
+
+
+<h1 id="C3">Design</h1>
+
+<h3>High Level System Diagram:</h3>
+<p align="justify">
+  The following circuit diagram has been created in <i>Fritzing</i> application software.
+  <br>
+  This became our finalized circuit design after receiving suitable components and working hard on coding for having one micro-controller.
+</p>
+
+<center>
+  <img src="images/ardutester_breadboard.jpg" width="800" height="550">
+</center>
+
+<br><br><br>
+
+
+<h3><center>Description of Principle of Operation</center></h3>
+
+<p align="justify">
+In this circuit, 5V DC power supply has been connected through USB(MINI) is connected to the circuit and then we insert a component in testport.
+One testport pin is selected as the positive side of the device and connected directly to VCC. The other testport pin is selected as the negative side of
+the device. The negative side is connected with the 680 resistor to GND. With field-effect transistors, the state of the device depends on the voltage
+of the gate. The Tristate pin is first connected with the 680 resistor for 5 ms to the GND side and the voltage at the negative side is measured.
+After that, the voltage of the negative side is measured again during the Tristate pin switched as input (High Impedance). Then the assumed gate is
+connected with the 680 resistor for 5 ms to the VCC side and the voltage on the negative side is measured again. If the measured voltage is lower
+than the first measurement result, this circuit will be assumed as the right one. Then the voltage is measured again with currentless Tristate pin.
+</p>
+<br><br>
+
+
+<p align="justify">
+When the Arduino code is uploaded in the Arduino UNO, LCD Display will be turned on, by inserting the component and by pressing the test button.
+The Testor then will start their calculations through resistors and display the results on the screen.
+</p>
+
+<br><br>
+
+
+<table border="10">
+  <tr>
+    <th colspan="3"><center>Choice of Major Components and their Brief Descriptions</center></th>
+  </tr>
+
+  <tr>
+    <td><i>Component Name</i></td>
+    <td><i>Picture</i></td>
+    <td><i>Description</i></td>
+  </tr>
+
+  <tr>
+    <td><b>Microcontroller 328P</b></td>
+    <td><center><img src="images/atmega328.jpg" width="110" height="110"></center></td>
+    <td>
+      It is an advanced virtual RISC microcontroller. It supports 8-bit data processing and has 32 Kb internal flash memory. 
+      It has 1Kb EEPROM also. It means that it can store data even if the electric connection is disrupted. It works on advanced 
+      RISC architecture, good performance and low power consumption. It has 3 built-in timers, of which two are 8-bit timers and 
+      the third one is a 16-bit timer. It’s operating voltages are from 1.8V to 5.5V.
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>LCD (32 character)</b></td>
+    <td><center><img src="images/LCD.jpg" width="110" height="110"></center></td>
+    <td>
+      This component adds a readable interface to our project. LCD is short for liquid crystal display and basically a display unit 
+      uses liquid crystals to form a visual image. When current is applied to these crystals, they become opaque, blocking the 
+      backlight that resides behind the screen. As a result that particular area will be dark compared to the others. And this is 
+      how the characters are displayed on the screen. If you look closely, you can see tiny rectangles for each character on the 
+      display and the pixels that make up a character. Each of these rectangles is a grid of 5×8 pixels.
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>USB (MINI)</b></td>
+    <td><center><img src="images/usb mini.jpg" width="110" height="110"></center></td>
+    <td>
+      It is a small USB socket found on digital cameras, external hard drives, USB hubs and other equipment. Mini USB is much 
+      smaller than USB Type A and B but twice as thick as Micro USB. Mini USB and all other USB connectors are expected to be 
+      superseded by USB Type. Here in the project, we are using the Mini USB in order to power the device. It is also used for 
+      communication between devices. It has high speed transfer rate of 480 Mbps with on-the-go feature.
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>Tactile Button</b></td>
+    <td><center><img src="images/tactile.jpg" width="110" height="110"></center></td>
+    <td>
+      In our project, its action is similar as described in its characteristics. When we press the button after inserting the 
+      component in our project, it gives the message like “ArduTester testing” — meaning it indicates the flow of current in that 
+      particular moment. After a few seconds, our project will show answers. If we plug out the component and insert another one, 
+      then we again press the button for testing of the device.
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>ICSP Header</b></td>
+    <td><center><img src="images/ICSP.jpg" width="110" height="110"></center></td>
+    <td>
+      The primary advantage of in-system programming is that it allows manufacturers of electronic devices to integrate programming 
+      and testing into a single production phase and save money, rather than requiring a separate programming stage prior to 
+      assembling the system. Another advantage is that production can always use the latest firmware, and new features, as well as 
+      bug fixes, can be implemented without delay. With these pins, we can also connect other devices for our project. It also 
+      functions for connected devices to the microcontroller as master-slave.
+    </td>
+  </tr>
+
+  <tr>
+    <td><b>FTDI (Future Technology Devices International Limited)</b></td>
+    <td><center><img src="images/FTDI.jpg" width="110" height="110"></center></td>
+    <td>
+      They are used to interface devices like Arduino with the laptop through a USB cable. In simple words, an FTDI chip makes it 
+      super easy to convert a USB signal to the UART signal understood by the microcontrollers. We use FTDI connectors to program 
+      the microcontroller in our project. We programmed the microcontroller by connecting the FTDI cable to our computer and then 
+      burned the program to the microcontroller with the help of Arduino IDE.
+    </td>
+  </tr>
+</table>
+<br><br>
+
+
+<h3>Connectivity of Components by Protocols:</h3>
+
+<p align="justify">
+  Two main protocols have been used in the circuitry of this project.
+</p>
+
+<ol type="1">
+  <li>UART Protocol</li>
+  <li>SPI Protocol</li>
+</ol>
+
+<br><br>
+
+<ol type="1">
+  <li>
+    <u><b>UART Protocol:</b></u>
+    <p align="justify">
+      UART stands for <b>Universal Asynchronous Reception Transmission.</b> This protocol permits the Arduino to communicate with serial devices 
+      through the pins <i>D0 (Rx)</i> & <i>D1 (Tx)</i>.
+      <br><br>
+      They are used to interface devices like Arduino with the laptop through a USB cable. In simple words, an FTDI chip makes
+      it super easy to convert a USB signal to the UART signal understood by the microcontrollers.
+    </p>
+  </li>
+</ol>
+
+<br><br>
+
+
+<li>
+  <u><b>SPI Protocol:</b></u>
+  <p align="justify">
+    There is no trace of communication protocol (most popular I2C or SPI) found within the components in our project. However, when our device is
+    connected to other devices like a computer for the purpose of bootloading the microcontroller or programming our device, it uses the SPI communication
+    protocol. This is because we have integrated ICSP headers into the PCB.
+    <br><br>
+    SPI is a protocol that transfers data serially between two microcontrollers and other devices. It is a synchronous interface, meaning it uses a clock
+    signal to transfer and receive data. In our project, the clock functionality is handled by a crystal oscillator.
+    <br><br>
+    This interface uses <b>MISO</b>, <b>MOSI</b>, <b>SCLK</b>, <b>CS</b>, <b>RST</b>, and <b>GND</b> for communication. We bootloaded the microprocessor
+    using ICSP headers, which relied on the SPI protocol.
+  </p>
+</li>
+</ol>
+
+<br><br><br>
+
+
+
+
+<center>
+  <h3>Electrical Schematic</h3>
+  <img src="images/Electrical Schematic.jpg" width="400" height="600">
+</center>
+
+<br><br>
+
+<h3>Description</h3>
+<p align="justify">
+  From the beginning of this project, our circuitry is based on <i>Arduino</i>. Hence, the schematic has been created similar to that of Arduino 
+  in which <b>ATMEGA328P</b> microcontroller of <i>SMD</i> package has been used along with LEDs, capacitors, measurement-purpose resistors, and a crystal oscillator.
+  In addition to these, male connectors have been attached for our components and for uploading the code using the <i>FTDI Cable</i> and for <i>Bootload</i>.
+  <br><br>
+  We also used a USB port for power supply, testing ports for component placement, and a test button. For visual output, we used a 16x2 character LCD 
+  to display the tested component parameters and its schematic symbol.
+</p>
+
+<br>
+
+<center>
+  <h3>PCB Layout</h3>
+  <img src="images/Electrical PCB.jpg" width="400" height="600">
+</center>
+
+<br><br>
+
+<h3>Challenges</h3>
+<p align="justify">
+  <i>
+    <u>Firstly</u>, we both tried but found that we were totally unfamiliar with <i>Eagle</i> software. The FABLAB team introduced us to its basics.
+    <br><br>
+    When switching from schematic to board layout, we struggled with component placement due to limited knowledge and inexperience. 
+    Again, the FABLAB team helped guide us through it.
+  </i>
+  <br><br>
+  <u>Secondly</u>, we initially tried to keep the circuit on a single layer. But due to complexity, we switched to a double-layer layout 
+  to ease routing and create a compact design.
+  <br><br>
+  <u>Third</u>, when transitioning to a double-layer PCB, we faced issues such as shifting traces between <b>Top</b> and <b>Bottom layers</b>,
+  adjusting <i>drill sizes</i>, and managing the spacing between adjacent traces and vias. The <b>FABLAB</b> team continuously guided us while 
+  we worked under the supervision of <i>Dr. Asim Samejo</i>.
+</p>
+
+
+
+
+<h3>Bill of Material</h3>
+<img src="images/Bill of Material.jpg" width=400 height=600>
+<br><br>
+<h3>Clean Printed Circuit Board</h3>
+<img src="images/PCB Top.jpg" width=400 height=600>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<img src="images/PCB BOTTOM.jpg" width=400 height=600>
+<br>
+<b>First Layer</b>
+
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<b>Second Layer</b>
+<br><br>
+
+
+<h3>Populated Printed Circuit Board</h3>
+<br><br>
+<img src="images/Populated pcb.jpg" width=400 height=600>
+
+<h3>Populated Printed Circuit Board</h3>
+<br><br>
+<img src="images/Populated pcb.jpg" width="400" height="600">
+
+<br><br>
+
+<h3>Burning the Bootloader</h3>
+<img src="images/Boot Load.jpg" width="400" height="600">
+
+<br><br>
+
+<h3>Procedure of Burning Bootloader</h3>
+<p align="justify">
+  <b>Bootloader is an initial piece of code (usually 512 bytes) which runs whenever a microcontroller is powered up or resets.</b>
+  It also looks for external inputs, i.e. uploading a new program. 
+  <b>Similarly, in case of no input, it executes the program that was uploaded previously.</b>
+  <br><br>
+  <i><u>Bootloading a device requires the following basic components:</u></i>
+</p>
+
+<br>
+
+<ol type="1" align="left">
+  <li>Arduino IDE</li>
+  <li>Device (to be bootloaded)</li>
+  <li>USB-AVR-ISP (<i>option in IDE and is optional</i>)</li>
+</ol>
+
+
+<b><u>Procedure:</u></b>
+<p><i>We adopted the following procedure to bootload our project in coordination with Sir Nadir Ali.</i></p>
+
+<ol type="a">
+  <li>Open the bootloader firmware from Arduino IDE by following the path: <b>File → Examples → ArduinoISP.</b></li>
+  <li>Select the model of programming board by following the path: <b>Tools → Board → Arduino Uno.</b></li>
+  <li>Select the <b>Upload</b> button in the IDE and proceed to load the <b>ArduinoISP sketch to your programmer board.</b></li>
+</ol>
+
+<br>
+
+<h3>Challenges in Booting Up</h3>
+
+<p align="justify">
+  We faced an issue during bootloading our project. In order to bootload the circuit, two steps were necessary:
+  <br><br>
+  The first step was to check the program we were using to bootload — fortunately, this was not the issue as the program came directly from the Arduino IDE.
+  <br><br>
+  The second step was to analyze the hardware circuit. Bootloading problems are usually due to either the program or the circuit. Since the program was verified,
+  we investigated the circuit. After deep analysis and tests, we realized that the <b>crystal oscillator was not soldered properly</b>.
+  <br><br>
+  Once we re-soldered the oscillator correctly, we were able to bootload our circuit successfully — as documented in our reference image.
+</p>
+
+<br><br>
+
+
+
+<h3>Successfully Operating Circuit</h3>
+<img src="images/Populated circuit.jpg" width="400" height="600">
+
+<br><br>
+
+<h3>Video</h3>
+<iframe width="400" height="600" src="https://www.youtube.com/embed/i-WZqEvgACc" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
+
+<br><br>
+
+<h3>Demonstration of Operational the Circuit</h3>
+<p align="justify">
+  In our project, besides the microcontroller requirements, <b>four other main components</b> are added to the PCB:
+  <br><br>
+  The <b>USB (Mini)</b> is used to power the circuit with approximately 5V. A <b>test button</b> is pressed when the device under test (component) 
+  is placed in the test port, or after a test is done, to test the next component. 
+  <br><br>
+  <b>Six measurement-purpose resistors</b> are added (three 680 ohm and three 470 kilo ohm). A 16x2 character <b>LCD</b> is used to display results.
+  <br><br>
+  In this way, we created a fully operational circuit running on only 5V.
+</p>
+
+<br><br>
+
+<h3>Flow Code of the Software Design</h3>
+<img src="images/flow chart.jpg" width="700" height="500">
+
+<br><br>
+
+
+<h3>Description of Flow Code</h3>
+<p align="justify">
+  First measurement is done with a 680 Ω base resistor switched to VCC. If the voltage at the base resistor is too low, the 470 kΩ resistor is
+  taken instead. If the voltage of the collector sinks below 1.6 V when the 680 Ω base resistor is connected to VCC, it must be an NPN, 
+  N-Channel MOSFET, or Thermistor/Triac.
+  <br><br>
+  With two simple tests, a Thyristor or Triac can be identified. If the gate pin resistor is connected for 10 ms to GND and then made currentless,
+  the current at the anode should stay. If the anode resistor is then short connected to GND and reconnected to VCC, the Thyristor should not trigger
+  again (no current).
+  <br><br>
+  Please keep in mind that only low-power Thyristors can be tested, because the holding current of the tester can reach only 6 mA. If both tests
+  confirm a Thyristor, further tests with reverse polarity are done to exclude or confirm a Triac.
+</p>
+
+<br><br>
+
+<h3>Diagram outlining main Functions</h3>
+<p align="justify">
+<div align="left">
+  <ul>
+
+
+<h3>Diagram outlining main Functions</h3>
+<p align="justify">
+  <div align="left">
+    <ul>
+      <li><b>It operates with the modes i.e., menu selection mode and self-test mode.</b></li>
+      <li><b>Automatic detection of NPN, PNP bipolar transistors, N and P channel MOSFETs, JFETs, diodes, N and P IGBTs, Thyristors, and Triac.</b></li>
+      <li><b>It can automatically detect pin layout of the detected part.</b></li>
+      <li><b>Also measures the current gain factor and base-emitter voltage (V<sub>BE</sub>) of a transistor.</b></li>
+      <li><b>Measures the gate threshold voltage, gate capacity value, and R<sub>DS(on)</sub> of MOSFETs.</b></li>
+      <li><b>Resistors can be measured with up to 0.01-ohm resolution, up to 50 MΩ.</b></li>
+      <li><b>Capacitors can be measured between 20 pF to 100 mF.</b></li>
+      <li><b>Can detect and measure diodes — LEDs are detected as diodes.</b></li>
+      <li><b>Zener diodes can be detected with a breakdown voltage of less than 4.5V.</b></li>
+    </ul>
+  </div>
+</p>
+<br>
+
+
+
+<table border="2">
+  <tr>
+    <th colspan="5" style="text-align:center;">Parts to be 3D Printed</th>
+  </tr>
+
+  <tr>
+    <td>Upper Part</td>
+    <td><img src="images/Part 1.jpg" height="400" width="300" alt="Upper Part"></td>
+    <td colspan="2">Taken from website</td>
+  </tr>
+
+  <tr>
+    <td>Lower Part</td>
+    <td><img src="images/Part 2.jpg" height="200" width="300" alt="Lower Part"></td>
+    <td colspan="2">Taken from website</td>
+  </tr>
+
+  <tr>
+    <td>Rod</td>
+    <td><img src="images/Part 3.jpg" height="200" width="300" alt="Rod"></td>
+    <td colspan="2">Taken from website</td>
+  </tr>
+</table>
+
+<br><br>
+
+
+<h3>Assembly of all Parts</h3>
+
+<br>
+<img src="images/Assembly part 1.jpg" width="600" height="300" alt="Assembly Part 1">
+<br><br>
+<img src="images/Assembly part 2.jpg" width="600" height="300" alt="Assembly Part 2">
+<br><br>
+<img src="images/Assembly part 3.jpg" width="600" height="300" alt="Assembly Part 3">
+<br><br><br>
+
+<h3>Design Consideration</h3>
+<p align="justify">
+  The idea of the design has been taken from the reference website, and the dimensions have been set in <b>millimetres.</b> 
+  According to the height and length of the <b><i>PCB with mounted LCD</i></b>, the dimensions have been decided, and upper and lower parts have been 
+  built. Inside the enclosure, there will be the <i>dedicated PCB</i> to connect the power supply internally. 
+  <i>We created a hole for a USB MINI.</i>
+</p>
+
+<br><br>
+
+<h2>Fabrication, Design and 3D Printing</h2>
+<br>
+
+<h3>3D Printing in the Ultimaker</h3>
+<br>
+<img src="images/Ultimaker in Lab.jpg" width="500" height="500" alt="3D Printing in Lab">
+<br><br>
+
+
+<h4>Procedure</h4>
+<p align="justify">
+  The <i>STL</i> file is opened in the <b><u>Cura</u></b> slicing 3D printing application, where the part is viewed and set according to 
+  the slicing pattern. The estimated print time can also be previewed. 
+  <br><br>
+  Then, a <i><u>GCode</u></i> file is generated, which is copied to an <i>SD Card</i> and inserted into the <b><u>Ultimaker</u></b>. 
+  The printer interprets the GCode and prints the part by slicing hot plastic material layer-by-layer in the required pattern.
+</p>
+
+<br><br>
+
+<img src="images/3D Printing Process Pic.jpg" height="500" width="500" alt="3D Printing Process">
+
+<br><br><br>
+
+<img src="images/3D Printed Part 01.jpg" width="400" height="600" alt="3D Printed Part 1">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/3D Printed Part 02.jpg" width="400" height="600" alt="3D Printed Part 2">
+
+<br><br>
+
+<h3>Final Design</h3>
+
+<img src="images/Final Product 02.jpg" width="400" height="400" alt="Final Product 2">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="images/Final Product 03.jpg" width="400" height="400" alt="Final Product 3">
+
+<br><br><br>
+
+
+
+<h3>Cost of the Project</h3>
+
+<table border="1" cellpadding="10" cellspacing="0">
+  <tr>
+    <th>Component</th>
+    <th>Cost</th>
+  </tr>
+
+  <tr>
+    <td>Full PCB</td>
+    <td>Rs. 1,500</td>
+  </tr>
+
+  <tr>
+    <td>LCD Display</td>
+    <td>Rs. 488</td>
+  </tr>
+
+  <tr>
+    <td>Plasting of 3D Printing</td>
+    <td>Rs. 2,500</td>
+  </tr>
+
+  <tr>
+    <td>Steel Rod</td>
+    <td>Rs. 600</td>
+  </tr>
+
+  <tr>
+    <th>Total:</th>
+    <th>Rs. 5,088</th>
+  </tr>
+</table>
+
+<br><br><br>
+
+
+<h3>Business Model of the Project</h3>
+<p align="justify">
+  Nowadays, every product, especially highly proficient and technological, is in high demand. Our mission is to create an affordable, portable, and pocket-sized transistor tester that can be used in electronic labs to measure precise and accurate component values and characteristics. 
+  <br><br>
+  This tester is designed to be easier to use and more cost-effective than a digital multimeter. It also shows the schematic symbol, pin diagram in case of BJTs, FETs, and MOSFETs, and polarity in the case of diodes and capacitors.
+</p>
+
+<br><br><br>
+
+<h3>Reference</h3>
+Click <a href="https://create.arduino.cc/projecthub/plouc68000/ardutester-v1-13-the-arduino-uno-transistor-tester-dbafb4" target="_blank">here</a> to visit the project reference website.
+
+<br><br>
+
+<h3>Source Code</h3>
+Click <a href="https://create.arduino.cc/editor/plouc68000/d6b548e6-37af-4cf0-b95f-cbaa9e89ea72/preview" target="_blank">here</a> to view or download the Arduino source code.
+
+<br><br>
+
+<h3>CAD Files</h3>
+Click <a href="https://github.com/wagiminator/ATmega-Transistor-Tester/blob/master/hardware/TransistorTester_case.stl" target="_blank">here</a> to download the CAD STL file.
+
+<br><br>
+
+<h3>Fritzing</h3>
+Click <a href="https://fritzing.org/projects/tester" target="_blank">here</a> to download the Fritzing file.
+
+<br><br><br>
+
+<h1 id="C5">Conclusion</h1>
+<p align="justify">
+  In this course, we felt fortunate to learn many new things through self-learning. It must be said that this course proved to be different from the rest. We were free to apply our ideas and engage in challenging activities.
+  <br><br>
+  While working on this project, we learned about teamwork, coordination, and cooperation. Our technical concepts were reinforced and enhanced, and learning was continuous.
+  <br><br>
+  To sum up, this course was rich with practical experience and hands-on knowledge. We encourage all to take this opportunity with enthusiasm and dedication.
+</p>
+
+<br><br><br><br>
+
+<center>
+  <i>
+    Copyright &copy; 2022, Bhai Khan (033-19-0015) & Wakeel Ahmed (033-19-0026).
+    All Rights Reserved | Terms and Conditions | Privacy Policy
+  </i>
+</center>
+
+</body>
+</html>
