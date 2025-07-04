@@ -81,8 +81,8 @@ project/
 
 ## 📽️ Demonstration Videos
 
-- [📺 Breadboard Prototype & Bootloading](https://www.youtube.com/embed/zdPWsUJlSmU)
-- [📺 Final Circuit Operation](https://www.youtube.com/embed/i-WZqEvgACc)
+- [<a href="https://www.youtube.com/embed/zdPWsUJlSmU" target="_blank">📺 Breadboard Prototype & Bootloading</a>
+- [<a href="https://www.youtube.com/embed/i-WZqEvgACc" target="_blank">📺 Final Circuit Operation</a>
 
 ---
 
