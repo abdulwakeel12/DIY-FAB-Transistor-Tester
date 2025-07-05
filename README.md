@@ -1,11 +1,11 @@
 # DIY FAB Transistor Tester
 
-> **4th Semester Project  
-> **Duration: March 2022 – July 2022
+> **4th Semester Project**  
+> **Duration:** March 2022 – July 2022
 > **Institution:** Sukkur IBA University  
 > **Department:** Electrical Engineering  
 > **Course:** Introduction to Embedded System 
-> **Supervisor: Dr. Muhammad Asim Samejo 
+> **Supervisor:** Dr. Muhammad Asim Samejo 
 
 ---
 
