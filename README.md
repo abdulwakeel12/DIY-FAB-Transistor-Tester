@@ -1,6 +1,6 @@
 # DIY FAB Transistor Tester
 
-> **4th Semester Project**  
+> **4th Semester Project  
 > **Duration: March 2022 – July 2022
 > **Institution:** Sukkur IBA University  
 > **Department:** Electrical Engineering  
