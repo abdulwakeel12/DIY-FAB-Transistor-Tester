@@ -5,7 +5,13 @@
 > **Institution:** Sukkur IBA University    
 > **Department:** Electrical Engineering  
 > **Course:** Introduction to Embedded System 
-> **Supervisor:** Dr. Muhammad Asim Samejo 
+> **Supervisor:** Dr. Muhammad Asim Samejo
+> **3rd Semester Project**  
+> **Duration:** October 2021 – February 2022  
+> **Institution:** Sukkur IBA University  
+> **Department:** Electrical Engineering  
+> **Course:** Electronic Devices and Circuits  
+> **Instructor:** Dr. Afaque Manzoor Soomro   
 
 ---
 
